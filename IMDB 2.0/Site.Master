@@ -4,16 +4,16 @@
 
 <html lang="pt">
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%: Page.Title %> - Meu aplicativo ASP.NET</title>
+    <title>IMDB 2.0</title>
 
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
 
-    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
 </head>
@@ -47,13 +47,33 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" runat="server" href="~/">Nome do aplicativo</a>
+                    <a class="navbar-brand" runat="server" href="~/">IMDB 2.0</a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a runat="server" href="~/">Página inicial</a></li>
-                        <li><a runat="server" href="~/About">Sobre</a></li>
-                        <li><a runat="server" href="~/Contact">Contato</a></li>
+                        <li class="dropdown">
+                            <a href="~/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ator<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a runat="server" href="~/Paginas/Ator/AtorList.aspx">Listar atores</a></li>
+                                <li><a runat="server" href="~/Paginas/Ator/AtorCreate.aspx">Cadastrar novo ator</a></li>
+                            </ul>
+                        </li>
+                        <li><a runat="server" href="~/Paginas/Atuacao/AtuacaoList.aspx">Atuações</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Filmes<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a runat="server" href="~/Paginas/Filme/FilmeList.aspx">Listar filmes</a></li>
+                                <li><a runat="server" href="~/Paginas/Filme/FilmeCreate.aspx">Cadastrar novo filme</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Idiomas<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a runat="server" href="~/Paginas/Idioma/IdiomaList.aspx">Listar idiomas</a></li>
+                                <li><a runat="server" href="~/Paginas/Idioma/Idioma.aspx">Cadastrar novo idioma</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -63,7 +83,7 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - Meu aplicativo ASP.NET</p>
+                <p>&copy; <%: DateTime.Now.Year %> - IMDB 2.0</p>
             </footer>
         </div>
 

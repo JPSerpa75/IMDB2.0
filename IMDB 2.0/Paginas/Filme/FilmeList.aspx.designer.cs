@@ -7,20 +7,11 @@
 // </gerado automaticamente>
 //------------------------------------------------------------------------------
 
-namespace IMDB_2._0
+namespace IMDB_2._0.Paginas.Filme
 {
 
 
-    public partial class SiteMaster
+    public partial class FilmeList
     {
-
-        /// <summary>
-        /// Controle MainContent.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
     }
 }

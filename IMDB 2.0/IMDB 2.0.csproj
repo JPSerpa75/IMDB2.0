@@ -136,6 +136,10 @@
       <DependentUpon>DataSetImdb2.xsd</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Paginas\Ator\AtorList.aspx" />
+    <Content Include="Paginas\Atuacao\AtuacaoList.aspx" />
+    <Content Include="Paginas\Filme\FilmeList.aspx" />
+    <Content Include="Paginas\Idioma\IdiomaList.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -201,6 +205,34 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Ator\AtorList.aspx.cs">
+      <DependentUpon>AtorList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Ator\AtorList.aspx.designer.cs">
+      <DependentUpon>AtorList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Atuacao\AtuacaoList.aspx.cs">
+      <DependentUpon>AtuacaoList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Atuacao\AtuacaoList.aspx.designer.cs">
+      <DependentUpon>AtuacaoList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Filme\FilmeList.aspx.cs">
+      <DependentUpon>FilmeList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Filme\FilmeList.aspx.designer.cs">
+      <DependentUpon>FilmeList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Idioma\IdiomaList.aspx.cs">
+      <DependentUpon>IdiomaList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Idioma\IdiomaList.aspx.designer.cs">
+      <DependentUpon>IdiomaList.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
