@@ -7,20 +7,11 @@
 // </gerado automaticamente>
 //------------------------------------------------------------------------------
 
-namespace IMDB_2._0.Paginas.Idioma
+namespace IMDB_2._0.Paginas.Filme
 {
 
 
-    public partial class IdiomaList
+    public partial class FilmeEdit
     {
-
-        /// <summary>
-        /// Controle GV_Idioma.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GV_Idioma;
     }
 }

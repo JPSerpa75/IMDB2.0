@@ -1,0 +1,37 @@
+﻿.content {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2em;
+    gap: 1.5em
+}
+
+.link{
+    text-decoration: none;
+    margin: 0.5em;
+}
+
+.w-100{
+    max-width: 100%;
+    width: 100%;
+}
+
+.img{
+    width: 30%;
+    height: 15%;
+}
+
+.mt{
+    margin-top: 2em;
+}
+
+.b-none{
+    border: none;
+    margin-bottom: 2em;
+}
+
+.content-end {
+    display: flex;
+    justify-content: end;
+    margin-bottom: 2em;
+    gap: 1.5em
+}

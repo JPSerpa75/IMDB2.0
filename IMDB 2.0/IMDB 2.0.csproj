@@ -110,6 +110,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="Content\Style.css" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -134,9 +135,17 @@
       <DependentUpon>DataSetImdb2.xsd</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="imgs\info.png" />
     <Content Include="Paginas\Ator\AtorList.aspx" />
     <Content Include="Paginas\Atuacao\AtuacaoList.aspx" />
+    <Content Include="Paginas\Filme\FilmeCreate.aspx" />
+    <Content Include="Paginas\Filme\FilmeDelete.aspx" />
+    <Content Include="Paginas\Filme\FilmeEdit.aspx" />
     <Content Include="Paginas\Filme\FilmeList.aspx" />
+    <Content Include="Paginas\Filme\FilmeView.aspx" />
+    <Content Include="Paginas\Idioma\IdiomaCreate.aspx" />
+    <Content Include="Paginas\Idioma\IdiomaDelete.aspx" />
+    <Content Include="Paginas\Idioma\IdiomaEdit.aspx" />
     <Content Include="Paginas\Idioma\IdiomaList.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -175,6 +184,9 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="DataSetImdb2.cs">
+      <DependentUpon>DataSetImdb2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSetImdb2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -204,12 +216,61 @@
     <Compile Include="Paginas\Atuacao\AtuacaoList.aspx.designer.cs">
       <DependentUpon>AtuacaoList.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Paginas\Filme\FilmeCreate.aspx.cs">
+      <DependentUpon>FilmeCreate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Filme\FilmeCreate.aspx.designer.cs">
+      <DependentUpon>FilmeCreate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Filme\FilmeDelete.aspx.cs">
+      <DependentUpon>FilmeDelete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Filme\FilmeDelete.aspx.designer.cs">
+      <DependentUpon>FilmeDelete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Filme\FilmeEdit.aspx.cs">
+      <DependentUpon>FilmeEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Filme\FilmeEdit.aspx.designer.cs">
+      <DependentUpon>FilmeEdit.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Paginas\Filme\FilmeList.aspx.cs">
       <DependentUpon>FilmeList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Paginas\Filme\FilmeList.aspx.designer.cs">
       <DependentUpon>FilmeList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Filme\FilmeView.aspx.cs">
+      <DependentUpon>FilmeView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Filme\FilmeView.aspx.designer.cs">
+      <DependentUpon>FilmeView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Idioma\IdiomaCreate.aspx.cs">
+      <DependentUpon>IdiomaCreate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Idioma\IdiomaCreate.aspx.designer.cs">
+      <DependentUpon>IdiomaCreate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Idioma\IdiomaDelete.aspx.cs">
+      <DependentUpon>IdiomaDelete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Idioma\IdiomaDelete.aspx.designer.cs">
+      <DependentUpon>IdiomaDelete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Idioma\IdiomaEdit.aspx.cs">
+      <DependentUpon>IdiomaEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Idioma\IdiomaEdit.aspx.designer.cs">
+      <DependentUpon>IdiomaEdit.aspx</DependentUpon>
     </Compile>
     <Compile Include="Paginas\Idioma\IdiomaList.aspx.cs">
       <DependentUpon>IdiomaList.aspx</DependentUpon>
