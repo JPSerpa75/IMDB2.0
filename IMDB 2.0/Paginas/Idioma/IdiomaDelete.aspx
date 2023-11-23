@@ -17,7 +17,7 @@
             </div>
         </div>
     </div>
-    <p>
-        <div id="txtError" class="alert alert-danger" role="alert" runat="server" visible="false"></div>
-    </p>
+
+    <div id="txtError" class="alert alert-danger" role="alert" runat="server" visible="false"></div>
+
 </asp:Content>

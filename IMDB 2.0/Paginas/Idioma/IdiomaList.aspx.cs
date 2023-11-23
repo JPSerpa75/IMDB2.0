@@ -19,8 +19,8 @@ namespace IMDB_2._0.Paginas.Idioma
             if(e.Row.RowType == DataControlRowType.DataRow)
             {
                 int idIdioma = Convert.ToInt32(DataBinder.Eval(e.Row.DataItem, "idIdioma"));
-                string editar = "<a class='link' href = 'IdiomaEdit?id=" + idIdioma + "'><span class='glyphicon glyphicon-pencil' aria-hidden='true'></span></a>";
-                string deletar = "<a class='link' href = 'IdiomaDelete?id=" + idIdioma + "'><span class='glyphicon glyphicon-trash' aria-hidden='true'></span></a>";
+                string editar = "<a class='link' href = 'IdiomaEdit?id=" + idIdioma + "'><i class='bi bi-pencil'></i></a>";
+                string deletar = "<a class='link' href = 'IdiomaDelete?id=" + idIdioma + "'><i class='bi bi-trash'></i></a>";
                 e.Row.Cells[1].Text = editar + " " + deletar;
 
             }

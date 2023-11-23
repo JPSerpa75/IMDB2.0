@@ -19,8 +19,8 @@ namespace IMDB_2._0.Paginas.Filme
             if (e.Row.RowType == DataControlRowType.DataRow)
             {
                 int idFilme = Convert.ToInt32(DataBinder.Eval(e.Row.DataItem, "idFilme"));
-                string editar = "<a class='link' href = 'FilmeEdit?id=" + idFilme + "'><span class='glyphicon glyphicon-pencil' aria-hidden='true'></span></a>";
-                string deletar = "<a class='link' href = 'FilmeDelete?id=" + idFilme + "'><span class='glyphicon glyphicon-trash' aria-hidden='true'></span></a>";
+                string editar = "<a class='link' href = 'FilmeEdit?id=" + idFilme + "'><i class='bi bi-pencil'></i></a>";
+                string deletar = "<a class='link' href = 'FilmeDelete?id=" + idFilme + "'><i class='bi bi-trash'></i></a>";
                 e.Row.Cells[4].Text = editar + " " + deletar;
 
             }
