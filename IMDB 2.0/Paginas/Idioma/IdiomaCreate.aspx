@@ -7,19 +7,16 @@
     </div>
 
     <div>
-        <form>
-            <div class="form-group w-100">
-                <label for="txtDescricao">Descrição</label>
-                <asp:TextBox ID="txtDescricao" runat="server" CssClass="form-control w-100" MaxLength="255" placeHolder="Inglês"></asp:TextBox>
-            </div>
-            <div class="content-end">
-                <a runat="server" class="btn btn-primary" href="~/Paginas/Idioma/IdiomaList.aspx">Voltar para lista de idiomas</a>
-                <asp:Button ID="btnSalvar" runat="server" CssClass="btn btn-success" Text="Salvar" OnClick="btnSalvar_Click" />
-            </div>
-            <p>
-                 <div id="txtError" class="alert alert-danger" role="alert" runat="server" visible="false"></div>
-            </p>
-        </form>
+        <div class="form-group">
+            <label for="txtDescricao">Descrição</label>
+            <asp:TextBox ID="txtDescricao" runat="server" CssClass="form-control col-12" MaxLength="255" placeHolder="Inglês"></asp:TextBox>
+        </div>
+        <div class="content-end">
+            <a runat="server" class="btn btn-primary" href="~/Paginas/Idioma/IdiomaList.aspx">Voltar para lista de idiomas</a>
+            <asp:Button ID="btnSalvar" runat="server" CssClass="btn btn-success" Text="Salvar" OnClick="btnSalvar_Click" />
+        </div>
     </div>
+
+    <div id="txtError" class="alert alert-danger" role="alert" runat="server" visible="false"></div>
 
 </asp:Content>

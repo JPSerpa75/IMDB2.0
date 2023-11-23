@@ -19,7 +19,33 @@ namespace IMDB_2._0.Paginas.Filme
 
         protected void btnSalvar_Click(object sender, EventArgs e)
         {
+            txtError.Visible = false;
+            String titulo = txtTitulo.Text.Trim();
+            String descricao = txtDescricao.Text.Trim();
+            String categoria = txtDescricao.Text.Trim();
+            int  anoLancamento = Convert.ToInt32(txtAnoLancamento.Text.Trim());
+            String classificaoIndicativa = txtClassIndicativa.Text.Trim();
+            int idIdioma = Convert.ToInt32(ddlIdioma.SelectedValue);
 
+            if (idIdioma==0)
+            {
+                txtError.Visible = true;
+                txtError.InnerText = "É necessário selecionar algum idioma";
+                return;
+            }
+
+            if (titulo != null && titulo.Length > 0 && descricao != null && descricao.Length > 0 && categoria != null && categoria.Length > 0)
+            {
+                int? retorno = 0;
+
+                DataSetImdb2TableAdapters.filmeTableAdapter ta = new DataSetImdb2TableAdapters.filmeTableAdapter();
+                ta.(descricao, ref retorno);
+
+
+
+                Response.Redirect("~/Paginas/Filme/FilmeList.aspx");
+
+            }
         }
 
         private void load_idiomas()
@@ -34,6 +60,8 @@ namespace IMDB_2._0.Paginas.Filme
 
             ddlIdioma.Items.Insert(0, new ListItem("Selecione um idioma", "0"));
         }
+
+        private 
 
     }
 }

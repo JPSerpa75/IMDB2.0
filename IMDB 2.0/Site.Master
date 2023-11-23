@@ -41,45 +41,51 @@
             </Scripts>
         </asp:ScriptManager>
 
-        <div class="navbar navbar-inverse navbar-fixed-top">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" runat="server" href="~/">IMDB 2.0</a>
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">Página inicial</a></li>
-                        <li class="dropdown">
-                            <a href="~/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ator<span class="caret"></span></a>
+                <a class="navbar-brand" href="~/">IMDB 2.0</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" runat="server" href="~/">Página inicial</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="~/" role="button" data-toggle="dropdown" aria-expanded="false">Ator
+                            </a>
                             <ul class="dropdown-menu">
-                                <li><a runat="server" href="~/Paginas/Ator/AtorList.aspx">Listar atores</a></li>
-                                <li><a runat="server" href="~/Paginas/Ator/AtorCreate.aspx">Cadastrar novo ator</a></li>
+                                <li><a class="dropdown-item" runat="server" href="~/Paginas/Ator/AtorList.aspx">Listar atores</a></li>
+                                <li><a class="dropdown-item" runat="server" href="~/Paginas/Ator/AtorCreate.aspx">Cadastrar novo ator</a></li>
                             </ul>
                         </li>
-                        <li><a runat="server" href="~/Paginas/Atuacao/AtuacaoList.aspx">Atuações</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Filmes<span class="caret"></span></a>
+                        <li class="nav-item">
+                            <a class="nav-link" runat="server" href="~/Paginas/Atuacao/AtuacaoList.aspx">Atuações</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="~/" role="button" data-toggle="dropdown" aria-expanded="false">Filme
+                            </a>
                             <ul class="dropdown-menu">
-                                <li><a runat="server" href="~/Paginas/Filme/FilmeList.aspx">Listar filmes</a></li>
-                                <li><a runat="server" href="~/Paginas/Filme/FilmeCreate.aspx">Cadastrar novo filme</a></li>
+                                <li><a class="dropdown-item" runat="server" href="~/Paginas/Filme/FilmeList.aspx">Listar filmes</a></li>
+                                <li><a class="dropdown-item" runat="server" href="~/Paginas/Filme/FilmeCreate.aspx">Cadastrar novo filme</a></li>
                             </ul>
                         </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Idiomas<span class="caret"></span></a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="~/" role="button" data-toggle="dropdown" aria-expanded="false">Idiomas
+                            </a>
                             <ul class="dropdown-menu">
-                                <li><a runat="server" href="~/Paginas/Idioma/IdiomaList.aspx">Listar idiomas</a></li>
-                                <li><a runat="server" href="~/Paginas/Idioma/IdiomaCreate.aspx">Cadastrar novo idioma</a></li>
+                                <li><a class="dropdown-item" runat="server" href="~/Paginas/Idioma/IdiomaList.aspx">Listar idiomas</a></li>
+                                <li><a class="dropdown-item" runat="server" href="~/Paginas/Idioma/IdiomaCreate.aspx">Cadastrar novo idioma</a></li>
                             </ul>
                         </li>
                     </ul>
                 </div>
             </div>
-        </div>
+        </nav>
+
+
+
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
