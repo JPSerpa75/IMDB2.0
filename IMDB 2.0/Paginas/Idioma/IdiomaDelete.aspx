@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="row mt content">
-        <div class="col-sm-6 col-md-4 text-center">
+        <div class="col-sm-6 col-md-4 col-xl-6 text-center">
             <div class="thumbnail">
                 <img class="img" src="../../imgs/info.png" alt="Alerta" />
                 <div class="caption">

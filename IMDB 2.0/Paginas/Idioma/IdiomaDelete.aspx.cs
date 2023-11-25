@@ -27,18 +27,38 @@ namespace IMDB_2._0.Paginas.Idioma
         protected void btnExcluir_Click(object sender, EventArgs e)
         {
             txtError.Visible = false;
-            int? retorno = 0;
-            DataSetImdb2TableAdapters.idiomaTableAdapter ta = new DataSetImdb2TableAdapters.idiomaTableAdapter();
-            ta.DeleteIdioma(id, ref retorno);
 
-            if (retorno == 1)
+            try
             {
-                txtError.Visible = true;
-                txtError.InnerText = "Esse idioma não pode ser excluído pois está em uso";
-                return;
+                int? retorno = 0;
+                DataSetImdb2TableAdapters.idiomaTableAdapter ta = new DataSetImdb2TableAdapters.idiomaTableAdapter();
+                ta.DeleteIdioma(id, ref retorno);
+
+                if (retorno == 1)
+                {
+                    ExibirErro("Esse idioma não pode ser excluído pois está em uso");
+                    return;
+                }
+
+                Response.Redirect("~/Paginas/Idioma/IdiomaList.aspx");
+
+            }
+            catch (Exception ex)
+            {
+
+                ExibirErro("Ocorreu um erro ao deletar o idioma. Detalhes: " + ex.Message);
             }
 
-            Response.Redirect("~/Paginas/Idioma/IdiomaList.aspx");
+
         }
+
+
+
+        private void ExibirErro(string mensagem)
+        {
+            txtError.Visible = true;
+            txtError.InnerText = mensagem;
+        }
+
     }
 }

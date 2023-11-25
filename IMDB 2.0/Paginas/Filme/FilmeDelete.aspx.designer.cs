@@ -15,6 +15,15 @@ namespace IMDB_2._0.Paginas.Filme
     {
 
         /// <summary>
+        /// Controle mensagem.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl mensagem;
+
+        /// <summary>
         /// Controle btnExcluir.
         /// </summary>
         /// <remarks>
@@ -22,5 +31,14 @@ namespace IMDB_2._0.Paginas.Filme
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnExcluir;
+
+        /// <summary>
+        /// Controle txtError.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl txtError;
     }
 }

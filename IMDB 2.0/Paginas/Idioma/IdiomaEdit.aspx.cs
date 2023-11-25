@@ -26,23 +26,38 @@ namespace IMDB_2._0.Paginas.Idioma
         {
             txtError.Visible = false;
             String descricao = txtDescricao.Text.Trim();
-            if (descricao != null && descricao.Length > 0)
+            if (string.IsNullOrEmpty(descricao))
+            {
+                ExibirErro("O campo Descrição deve ser preenchidos!");
+                return;
+            }
+
+            try
             {
                 int? retorno = 0;
-
                 DataSetImdb2TableAdapters.idiomaTableAdapter ta = new DataSetImdb2TableAdapters.idiomaTableAdapter();
                 ta.UpdateIdioma(descricao, id, ref retorno);
 
                 if (retorno == 1)
                 {
-                    txtError.Visible = true;
-                    txtError.InnerText = "Já existe um idioma com essa descrição!";
+                    ExibirErro("Já existe um idioma com essa descrição!");
                     return;
                 }
 
                 Response.Redirect("~/Paginas/Idioma/IdiomaList.aspx");
-
             }
+            catch (Exception ex)
+            {
+                ExibirErro("Ocorreu um erro ao salvar o idioma. Detalhes: " + ex.Message);
+            }
+
+
+        }
+
+        private void ExibirErro(string mensagem)
+        {
+            txtError.Visible = true;
+            txtError.InnerText = mensagem;
         }
 
     }
