@@ -16,9 +16,8 @@ namespace IMDB_2._0.Paginas.Ator
             if (!IsPostBack)
             {
                 DataSetImdb2TableAdapters.atorTableAdapter ta = new DataSetImdb2TableAdapters.atorTableAdapter();
-                //DataSetImdb2.atorDataTable dt = ta.GetFilmeById(id);
-                //mensagem.InnerText = "Deseja realmente excluir o Ator " + dt[0].nome + " " + dt[0].sobrenome + "?";
-                mensagem.InnerText = "Deseja realmente excluir o Ator " + id + "?";
+                DataSetImdb2.atorDataTable dt = ta.GetAtorById(id);
+                mensagem.InnerText = "Deseja realmente excluir o Ator " + dt[0].nome + " " + dt[0].sobrenome + "?";
             }
         }
 
@@ -31,7 +30,7 @@ namespace IMDB_2._0.Paginas.Ator
             {
                 int? retorno = 0;
                 DataSetImdb2TableAdapters.atorTableAdapter ta = new DataSetImdb2TableAdapters.atorTableAdapter();
-                //ta.DeleteAtor(id, ref retorno);
+                ta.DeleteAtor(id, ref retorno);
 
                 if (retorno == 1)
                 {
