@@ -26,6 +26,13 @@ namespace IMDB_2._0.Paginas.Ator
             String nome = txtNome.Text;
             String sobrenome = txtSobrenome.Text;
 
+            if (string.IsNullOrEmpty(nome.Trim()) || string.IsNullOrEmpty(sobrenome.Trim()))
+            {
+                ExibirErro("Os campos Nome e Sobrenome devem ser preenchidos!");
+                return;
+
+            }
+
             try
             {
                 DataSetImdb2TableAdapters.atorTableAdapter ta = new DataSetImdb2TableAdapters.atorTableAdapter();
