@@ -38,7 +38,7 @@
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="imdb2ConnectionString (Web.config)" DbObjectName="imdb2.dbo.getAtorById" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="GetAtorById" Modifier="Public" Name="GetAtorById" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="GetAtorById">
+              <DbSource ConnectionRef="imdb2ConnectionString (Web.config)" DbObjectName="imdb2.dbo.getAtorById" DbObjectType="StoredProcedure" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetAtorById" GetMethodModifier="Public" GetMethodName="GetAtorById" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetAtorById" UserSourceName="GetAtorById">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.getAtorById</CommandText>
@@ -49,7 +49,7 @@
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="imdb2ConnectionString (Web.config)" DbObjectName="imdb2.dbo.insertAtor" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="InsertAtor" Modifier="Public" Name="InsertAtor" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="InsertAtor">
+              <DbSource ConnectionRef="imdb2ConnectionString (Web.config)" DbObjectName="imdb2.dbo.insertAtor" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="InsertAtor" Modifier="Public" Name="InsertAtor" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="InsertAtor">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.insertAtor</CommandText>
@@ -61,7 +61,7 @@
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="imdb2ConnectionString (Web.config)" DbObjectName="imdb2.dbo.updateAtor" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="UpdateAtor" Modifier="Public" Name="UpdateAtor" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="UpdateAtor">
+              <DbSource ConnectionRef="imdb2ConnectionString (Web.config)" DbObjectName="imdb2.dbo.updateAtor" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="UpdateAtor" Modifier="Public" Name="UpdateAtor" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="UpdateAtor">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.updateAtor</CommandText>
@@ -311,7 +311,7 @@
   <xs:element name="DataSetImdb2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetImdb2" msprop:Generator_UserDSName="DataSetImdb2">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="ator" msprop:Generator_TableClassName="atorDataTable" msprop:Generator_TableVarName="tableator" msprop:Generator_TablePropName="ator" msprop:Generator_RowDeletingName="atorRowDeleting" msprop:Generator_RowChangingName="atorRowChanging" msprop:Generator_RowEvHandlerName="atorRowChangeEventHandler" msprop:Generator_RowDeletedName="atorRowDeleted" msprop:Generator_UserTableName="ator" msprop:Generator_RowChangedName="atorRowChanged" msprop:Generator_RowEvArgName="atorRowChangeEvent" msprop:Generator_RowClassName="atorRow">
+        <xs:element name="ator" msprop:Generator_TableClassName="atorDataTable" msprop:Generator_TableVarName="tableator" msprop:Generator_RowChangedName="atorRowChanged" msprop:Generator_TablePropName="ator" msprop:Generator_RowDeletingName="atorRowDeleting" msprop:Generator_RowChangingName="atorRowChanging" msprop:Generator_RowEvHandlerName="atorRowChangeEventHandler" msprop:Generator_RowDeletedName="atorRowDeleted" msprop:Generator_RowClassName="atorRow" msprop:Generator_UserTableName="ator" msprop:Generator_RowEvArgName="atorRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idAtor" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidAtor" msprop:Generator_ColumnPropNameInRow="idAtor" msprop:Generator_ColumnPropNameInTable="idAtorColumn" msprop:Generator_UserColumnName="idAtor" type="xs:int" />
@@ -332,7 +332,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="filme" msprop:Generator_TableClassName="filmeDataTable" msprop:Generator_TableVarName="tablefilme" msprop:Generator_RowChangedName="filmeRowChanged" msprop:Generator_TablePropName="filme" msprop:Generator_RowDeletingName="filmeRowDeleting" msprop:Generator_RowChangingName="filmeRowChanging" msprop:Generator_RowEvHandlerName="filmeRowChangeEventHandler" msprop:Generator_RowDeletedName="filmeRowDeleted" msprop:Generator_RowClassName="filmeRow" msprop:Generator_UserTableName="filme" msprop:Generator_RowEvArgName="filmeRowChangeEvent">
+        <xs:element name="filme" msprop:Generator_TableClassName="filmeDataTable" msprop:Generator_TableVarName="tablefilme" msprop:Generator_TablePropName="filme" msprop:Generator_RowDeletingName="filmeRowDeleting" msprop:Generator_RowChangingName="filmeRowChanging" msprop:Generator_RowEvHandlerName="filmeRowChangeEventHandler" msprop:Generator_RowDeletedName="filmeRowDeleted" msprop:Generator_UserTableName="filme" msprop:Generator_RowChangedName="filmeRowChanged" msprop:Generator_RowEvArgName="filmeRowChangeEvent" msprop:Generator_RowClassName="filmeRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idFilme" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidFilme" msprop:Generator_ColumnPropNameInRow="idFilme" msprop:Generator_ColumnPropNameInTable="idFilmeColumn" msprop:Generator_UserColumnName="idFilme" type="xs:int" />
@@ -377,7 +377,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="idioma" msprop:Generator_TableClassName="idiomaDataTable" msprop:Generator_TableVarName="tableidioma" msprop:Generator_RowChangedName="idiomaRowChanged" msprop:Generator_TablePropName="idioma" msprop:Generator_RowDeletingName="idiomaRowDeleting" msprop:Generator_RowChangingName="idiomaRowChanging" msprop:Generator_RowEvHandlerName="idiomaRowChangeEventHandler" msprop:Generator_RowDeletedName="idiomaRowDeleted" msprop:Generator_RowClassName="idiomaRow" msprop:Generator_UserTableName="idioma" msprop:Generator_RowEvArgName="idiomaRowChangeEvent">
+        <xs:element name="idioma" msprop:Generator_TableClassName="idiomaDataTable" msprop:Generator_TableVarName="tableidioma" msprop:Generator_TablePropName="idioma" msprop:Generator_RowDeletingName="idiomaRowDeleting" msprop:Generator_RowChangingName="idiomaRowChanging" msprop:Generator_RowEvHandlerName="idiomaRowChangeEventHandler" msprop:Generator_RowDeletedName="idiomaRowDeleted" msprop:Generator_UserTableName="idioma" msprop:Generator_RowChangedName="idiomaRowChanged" msprop:Generator_RowEvArgName="idiomaRowChangeEvent" msprop:Generator_RowClassName="idiomaRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idIdioma" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidIdioma" msprop:Generator_ColumnPropNameInRow="idIdioma" msprop:Generator_ColumnPropNameInTable="idIdiomaColumn" msprop:Generator_UserColumnName="idIdioma" type="xs:int" />
@@ -392,7 +392,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="atuacoes" msprop:Generator_TableClassName="atuacoesDataTable" msprop:Generator_TableVarName="tableatuacoes" msprop:Generator_TablePropName="atuacoes" msprop:Generator_RowDeletingName="atuacoesRowDeleting" msprop:Generator_RowChangingName="atuacoesRowChanging" msprop:Generator_RowEvHandlerName="atuacoesRowChangeEventHandler" msprop:Generator_RowDeletedName="atuacoesRowDeleted" msprop:Generator_UserTableName="atuacoes" msprop:Generator_RowChangedName="atuacoesRowChanged" msprop:Generator_RowEvArgName="atuacoesRowChangeEvent" msprop:Generator_RowClassName="atuacoesRow">
+        <xs:element name="atuacoes" msprop:Generator_TableClassName="atuacoesDataTable" msprop:Generator_TableVarName="tableatuacoes" msprop:Generator_RowChangedName="atuacoesRowChanged" msprop:Generator_TablePropName="atuacoes" msprop:Generator_RowDeletingName="atuacoesRowDeleting" msprop:Generator_RowChangingName="atuacoesRowChanging" msprop:Generator_RowEvHandlerName="atuacoesRowChangeEventHandler" msprop:Generator_RowDeletedName="atuacoesRowDeleted" msprop:Generator_RowClassName="atuacoesRow" msprop:Generator_UserTableName="atuacoes" msprop:Generator_RowEvArgName="atuacoesRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="nomeAtor" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnnomeAtor" msprop:Generator_ColumnPropNameInRow="nomeAtor" msprop:Generator_ColumnPropNameInTable="nomeAtorColumn" msprop:Generator_UserColumnName="nomeAtor" minOccurs="0">
