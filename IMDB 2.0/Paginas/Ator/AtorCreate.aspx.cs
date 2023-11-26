@@ -19,7 +19,7 @@ namespace IMDB_2._0.Paginas.Ator
             string nome = txtNome.Text;
             string sobrenome = txtSobrenome.Text;
 
-            if (string.IsNullOrEmpty(nome) || string.IsNullOrEmpty(sobrenome))
+            if (string.IsNullOrEmpty(nome.Trim()) || string.IsNullOrEmpty(sobrenome.Trim()))
             {
                 ExibirErro("Os campos Nome e Sobrenome devem ser preenchidos!");
                 return;
