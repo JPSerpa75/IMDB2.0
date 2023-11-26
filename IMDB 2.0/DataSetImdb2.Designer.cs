@@ -390,6 +390,8 @@ namespace IMDB_2._0 {
             
             private global::System.Data.DataColumn columnsobrenome;
             
+            private global::System.Data.DataColumn columnlink;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public atorDataTable() {
@@ -449,6 +451,14 @@ namespace IMDB_2._0 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn linkColumn {
+                get {
+                    return this.columnlink;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -484,12 +494,13 @@ namespace IMDB_2._0 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public atorRow AddatorRow(string nome, string sobrenome) {
+            public atorRow AddatorRow(string nome, string sobrenome, string link) {
                 atorRow rowatorRow = ((atorRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         nome,
-                        sobrenome};
+                        sobrenome,
+                        link};
                 rowatorRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowatorRow);
                 return rowatorRow;
@@ -522,6 +533,7 @@ namespace IMDB_2._0 {
                 this.columnidAtor = base.Columns["idAtor"];
                 this.columnnome = base.Columns["nome"];
                 this.columnsobrenome = base.Columns["sobrenome"];
+                this.columnlink = base.Columns["link"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -533,6 +545,8 @@ namespace IMDB_2._0 {
                 base.Columns.Add(this.columnnome);
                 this.columnsobrenome = new global::System.Data.DataColumn("sobrenome", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnsobrenome);
+                this.columnlink = new global::System.Data.DataColumn("link", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnlink);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnidAtor}, true));
                 this.columnidAtor.AutoIncrement = true;
@@ -1662,6 +1676,22 @@ namespace IMDB_2._0 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string link {
+                get {
+                    try {
+                        return ((string)(this[this.tableator.linkColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'link\' na tabela \'ator\' é DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableator.linkColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsnomeNull() {
                 return this.IsNull(this.tableator.nomeColumn);
             }
@@ -1682,6 +1712,18 @@ namespace IMDB_2._0 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetsobrenomeNull() {
                 this[this.tableator.sobrenomeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IslinkNull() {
+                return this.IsNull(this.tableator.linkColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetlinkNull() {
+                this[this.tableator.linkColumn] = global::System.Convert.DBNull;
             }
         }
         

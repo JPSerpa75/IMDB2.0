@@ -16,13 +16,12 @@ namespace IMDB_2._0.Paginas.Ator
             if (!IsPostBack)
             {
                 DataSetImdb2TableAdapters.atorTableAdapter ta = new DataSetImdb2TableAdapters.atorTableAdapter();
-                //load_fields(ta.GetFilmeById(id));
+                load_fields(ta.GetAtorById(id));
             }
 
         }
         protected void btnSalvar_Click(object sender, EventArgs e)
         {
-
             txtError.Visible = false;
             String nome = txtNome.Text;
             String sobrenome = txtSobrenome.Text;
@@ -30,7 +29,7 @@ namespace IMDB_2._0.Paginas.Ator
             try
             {
                 DataSetImdb2TableAdapters.atorTableAdapter ta = new DataSetImdb2TableAdapters.atorTableAdapter();
-                //ta.UpdateAtor(nome, sobrenome, id);
+                ta.UpdateAtor(id,nome, sobrenome);
 
                 Response.Redirect("~/Paginas/Ator/AtorList.aspx");
             }
@@ -48,8 +47,8 @@ namespace IMDB_2._0.Paginas.Ator
             if (dt.Rows.Count > 0)
             {
 
-                // txtNome.Text = dt[0].nome;
-                // txtSobrenome.Text = dt[0].sobrenome;
+                txtNome.Text = dt[0].nome;
+                txtSobrenome.Text = dt[0].sobrenome;
 
             }
 

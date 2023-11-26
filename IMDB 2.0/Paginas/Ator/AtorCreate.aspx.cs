@@ -29,7 +29,7 @@ namespace IMDB_2._0.Paginas.Ator
             try
             {
                 DataSetImdb2TableAdapters.atorTableAdapter ta = new DataSetImdb2TableAdapters.atorTableAdapter();
-                // ta.InsertAtor(nome, sobrenome);
+                ta.InsertAtor(nome, sobrenome);
                 Response.Redirect("AtorList.aspx");
             }
             catch (Exception ex)
