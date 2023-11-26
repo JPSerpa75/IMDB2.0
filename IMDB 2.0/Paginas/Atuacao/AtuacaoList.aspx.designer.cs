@@ -7,11 +7,20 @@
 // </gerado automaticamente>
 //------------------------------------------------------------------------------
 
-namespace IMDB_2._0.Paginas.Filme
+namespace IMDB_2._0.Paginas.Atuacao
 {
 
 
-    public partial class FilmeList
+    public partial class AtuacaoList
     {
+
+        /// <summary>
+        /// Controle GV_Atuacoes.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GV_Atuacoes;
     }
 }
