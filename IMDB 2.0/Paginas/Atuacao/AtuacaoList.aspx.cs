@@ -13,5 +13,14 @@ namespace IMDB_2._0.Paginas.Atuacao
         {
 
         }
+
+        protected void Load_atuacoes()
+        {
+            DataSetImdb2TableAdapters.atorTableAdapter tableAdapter = new DataSetImdb2TableAdapters.atorTableAdapter();
+            DataSetImdb2.atorDataTable dt = tableAdapter.GetAllAtor();
+            GV_Atuacoes.DataSource = dt;
+            GV_Atuacoes.DataBind();
+
+        }
     }
 }

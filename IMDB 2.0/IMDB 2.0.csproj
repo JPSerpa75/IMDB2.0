@@ -136,6 +136,9 @@
       <DependentUpon>DataSetImdb2.xsd</DependentUpon>
     </Content>
     <Content Include="libman.json" />
+    <Content Include="Paginas\Ator\AtorCreate.aspx" />
+    <Content Include="Paginas\Ator\AtorDelete.aspx" />
+    <Content Include="Paginas\Ator\AtorEdit.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -289,6 +292,27 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Ator\AtorCreate.aspx.cs">
+      <DependentUpon>AtorCreate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Ator\AtorCreate.aspx.designer.cs">
+      <DependentUpon>AtorCreate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Ator\AtorDelete.aspx.cs">
+      <DependentUpon>AtorDelete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Ator\AtorDelete.aspx.designer.cs">
+      <DependentUpon>AtorDelete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Ator\AtorEdit.aspx.cs">
+      <DependentUpon>AtorEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Ator\AtorEdit.aspx.designer.cs">
+      <DependentUpon>AtorEdit.aspx</DependentUpon>
     </Compile>
     <Compile Include="Paginas\Ator\AtorList.aspx.cs">
       <DependentUpon>AtorList.aspx</DependentUpon>
